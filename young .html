@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFC AUTOBIZ - Automobile World</title>
+
+<style>
+/* ----- COMMON STYLES ----- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+}
+nav {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: yellow;
+}
+section {
+  padding: 50px 20px;
+}
+.return a {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #f4b400;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.return a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ----- PAGE BACKGROUNDS ----- */
+#home {
+  background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+}
+#pictures {
+  background: url('https://images.unsplash.com/photo-1605559424843-9d9f0df930ad?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+}
+#audios {
+  background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+}
+#videos {
+  background: url('https://images.unsplash.com/photo-1499907612490-9673d003bda7?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+}
+#about {
+  background: url('https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+}
+
+/* ----- GALLERY IMAGES ----- */
+.gallery img {
+  width: 200px;
+  height: 130px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+/* ----- AUDIO & VIDEO ----- */
+.media {
+  margin: 20px;
+}
+.media audio, .media video {
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* ----- ABOUT SECTION ----- */
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid yellow;
+}
+.about-info {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HOME PAGE ===== -->
+<section id="home">
+  <h1>Welcome to AFC AUTOBIZ</h1>
+  <p>Your trusted destination for premium cars and automotive trends.</p>
+  <nav>
+    <a href="#pictures">Gallery</a>
+    <a href="#audios">Audio</a>
+    <a href="#videos">Video</a>
+    <a href="#about">About Me</a>
+  </nav>
+</section>
+
+<!-- ===== PICTURE PAGE ===== -->
+<section id="pictures">
+  <h2>Our Automobile Gallery</h2>
+  <div class="gallery">
+    <figure>
+<img src="car1.jpg" alt="RANGE">
+      <figcaption>Luxury Sedan</figcaption>
+    </figure>
+    <figure>
+<img src="car2.jpg" alt="MERCEDES">
+      <figcaption>Powerful SUV</figcaption>
+    </figure>
+    <figure>
+<img src="car3.jpg" alt="Benz">
+      <figcaption>Sport Coupe</figcaption>
+    </figure>
+    <figure>
+<img src="car4.jpg" alt="FAVOURITE">
+      <figcaption>Classic Model</figcaption>
+    </figure>
+  </div>
+  <div class="return"><a href="#home">Return to Homepage</a></div>
+</section>
+
+<!-- ===== AUDIO PAGE ===== -->
+<section id="audios">
+  <h2>Engine Sound Gallery</h2>
+  <div class="media">
+    <p>V8 Engine Sound</p>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
+  </div>
+  <div class="media">
+    <p>Sports Car Startup</p>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+    </audio>
+  </div>
+  <div class="return"><a href="#home">Return to Homepage</a></div>
+</section>
+
+<!-- ===== VIDEO PAGE ===== -->
+<section id="videos">
+  <h2>Automobile Showcase</h2>
+  <div class="media">
+    <p>Supercar Drift</p>
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="media">
+    <p>Luxury Car Commercial</p>
+    <video controls>
+      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="return"><a href="#home">Return to Homepage</a></div>
+</section>
+
+<!-- ===== ABOUT ME PAGE ===== -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+<img src="benneth.jpg" alt="BEN">
+    <div class="about-info">
+      <p><strong>Name:</strong> Benneth Esoun-Koomson</p>
+      <p><strong>Field:</strong> Automobile Enthusiast & Developer</p>
+      <p><strong>Contact:</strong> 0554454758</p>
+      <p><strong>Email:</strong> afcbiznez@gmail.com</p>
+      <p>I’m passionate about creating modern automotive experiences and exploring car technologies that redefine driving.</p>
+      <button onclick="showMessage()">Click Me </button>
+    </div>
+  </div>
+  <div class="return"><a href="#home">Return to Homepage</a></div>
+</section>
+
+<script>
+function showMessage() {
+  alert("Welcome to AFC AUTOBIZ  — Keep Driving Forward!");
+}
+</script>
+
+</body>
+</html>
