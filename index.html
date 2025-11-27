@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFC AUTOBIZ - Automobile World</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: red;
+  text-align: center;
+}
+
+/* ===== CHATBOX ===== */
+.chatbox {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  padding: 15px 15px;
+  border-radius: 10px;
+  max-width: 180px;
+  font-size: 10px;
+  display: none;
+  z-index: 9999;
+}
+
+/* ===== SLOGAN ANIMATION ===== */
+.moving-slogan {
+  animation: moveSlogan 8s ease-in-out infinite alternate;
+}
+
+@keyframes moveSlogan {
+  from { transform: translateX(-120px); }
+  to   { transform: translateX(120px); }
+}
+
+/* ===== NAV ===== */
+nav {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+section {
+  padding: 50px 20px;
+  position: relative;
+}
+
+.return a {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #f4b400;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.return a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ===== PAGE BACKGROUNDS ===== */
+#home {
+  background: url('home.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
+  color: black;
+  position: relative;
+}
+
+/* ASH OVERLAY */
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(190,190,190,0.55);
+}
+
+#home * {
+  position: relative;
+  z-index: 2;
+}
+
+#pictures {
+  background: url('pictures-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+#audios {
+  background: url('audios-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+#videos {
+  background: url('videos-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+#about, #forms {
+  background: url('about-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* ASH OVERLAY FOR FORMS */
+#forms::before {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(190,190,190,0.55);
+}
+
+#forms * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.car-item {
+  margin: 10px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+  width: 220px;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.car-item img {
+  width: 200px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.car-item button {
+  margin-top: 10px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== MEDIA ===== */
+.media audio, .media video {
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid red;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.about-info {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  max-width: 350px;
+}
+
+/* ===== FORM INPUTS ===== */
+input, select, textarea {
+  width: 250px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CHATBOX -->
+<div class="chatbox" id="chatbox">
+  I'm Benneth Koomson,<br>
+  how can I assist you with automotive or web development?
+</div>
+
+<!-- HOME -->
+<section id="home">
+  <h1>Welcome to AFC AUTOBIZ</h1>
+  <p class="moving-slogan">Your trusted destination for premium cars and automotive trends.</p>
+  <nav>
+    <a href="#pictures">Gallery</a>
+    <a href="#audios">Audio</a>
+    <a href="#videos">Video</a>
+    <a href="#about">About Me</a>
+    <a href="#forms">Forms</a>
+  </nav>
+</section>
+
+<!-- PICTURES -->
+<section id="pictures">
+  <h2>GALLERY</h2>
+  <div class="gallery">
+    <div class="car-item">
+      <img src="car1.jpg">
+      <p><strong>RANGE</strong></p>
+      <p>Price: GHC550K</p>
+      <button onclick="buyCar('RANGE',55000)">Buy Now</button>
+    </div>
+    <div class="car-item">
+      <img src="car2.jpg">
+      <p><strong>MERCEDES</strong></p>
+      <p>Price: GHC450</p>
+      <button onclick="buyCar('MERCEDES',45000)">Buy Now</button>
+    </div>
+        <div class="car-item">
+      <img src="car3.jpg">
+      <p><strong>C CLASS</strong></p>
+      <p>Price: GHC550K</p>
+      <button onclick="buyCar('C CLASS',35000)">Buy Now</button>
+    </div>
+    
+
+    <div class="car-item">
+      <img src="car4.jpg">
+      <p><strong>RANGE & GLE</strong></p>
+      <p>Price: GHC999K</p>
+      <button onclick="buyCar('RANGE & GLE',9990)">Buy Now</button>
+    </div>
+    
+  </div>
+  <div class="return"><a href="#home">Return Home</a></div>
+</section>
+
+<!-- AUDIO -->
+<section id="audios">
+  <h2>ENGINESOUNDS</h2>
+  <div class="media">
+    <p>V8 ENGINE</p>
+    <audio controls><source src="v8.mp3"></audio>
+  </div>
+  <div class="media">
+    <p>KANTANKA ENGINE</p>
+    <audio controls><source src="startup.mp3"></audio>
+  </div>
+  <div class="return"><a href="#home">Return Home</a></div>
+</section>
+
+<!-- VIDEO -->
+<section id="videos">
+  <h2>VIDEOS</h2>
+  <div class="media">
+    <p>Supercar Drift</p>
+    <video controls><source src="drift.mp4"></video>
+  </div>
+  <div class="media">
+    <p>Luxury Car</p>
+    <video controls><source src="luxury.mp4"></video>
+  </div>
+  <div class="return"><a href="#home">Return Home</a></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="benneth.jpg">
+    <div class="about-info">
+      <p><strong>Name:</strong> Benneth Esoun-Koomson</p>
+      <p><strong>Field:</strong> Automobile Enthusiast & Web Developer</p>
+      <p><strong>Contact:</strong> 0554454758</p>
+      <p><strong>Email:</strong> afcbiznez@gmail.com</p>
+    </div>
+  </div>
+  <div class="return"><a href="#home">Return Home</a></div>
+</section>
+
+<!-- FORMS -->
+<section id="forms">
+  <h2>BOOK AN APPOINTMENT</h2>
+  <div class="about-info">
+    <form>
+      <input type="text" placeholder="First Name" required><br>
+      <input type="text" placeholder="Last Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="tel" placeholder="Phone Number" required><br>
+      <select required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select><br>
+      <label><strong>Date of Birth (DOB):</strong></label><br>
+      <input type="date" required><br>
+      <input type="text" placeholder="City" required><br>
+      <input type="text" placeholder="Country" required><br>
+      <input type="text" placeholder="Favourite Car Brand" required><br>
+      <textarea rows="3" placeholder="Reason for Contact" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="return"><a href="#home">Return Home</a></div>
+</section>
+
+<script>
+/* CHATBOX APPEARS AFTER 3 SECONDS */
+setTimeout(() => {
+  document.getElementById("chatbox").style.display = "block";
+}, 1000);
+
+function buyCar(name, price) {
+  alert(`You selected ${name} for $${price.toLocaleString()}.\nThanks.`);
+}
+</script>
+
+</body>
+</html>
